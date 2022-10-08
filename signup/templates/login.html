@@ -1,0 +1,78 @@
+{% include "header.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    trap.min.js"></script>
+</head>
+<style>
+     body {
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: antiquewhite;
+        justify-content: center;
+        align-items: center;
+        place-items: center;
+    }
+    
+    .container {
+        margin-top:30px
+        width: 350px;
+        height: 500px;
+        border-radius: 20px;
+        padding: 40px;
+        box-sizing: border-box;
+        background-color: aliceblue;
+        box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px rgb(224, 231, 233);
+    }
+    
+    input {
+        background-color: #ecf0f3;
+        padding: 10px;
+        padding-left: 20px;
+        height: 50px;
+        font-size: 14px;
+        border-radius: 40px;
+        box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px -6px white;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+            <h2 class="text-center bg-dark text-white">LogIn form</h2>
+      
+        <form action="show" method="post">
+            {% csrf_token %}
+
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pass">
+            </div>
+            <div class="col-md-12 text-center">
+                <button type="submit" class="btn btn-primary">LogIn</button>
+                <button type="reset" class="btn btn-warning">Reset</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+</body>
+
+</html>
